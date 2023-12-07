@@ -1,11 +1,10 @@
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { Suspense } from 'react';
 import { routes } from './routes';
 import logo from '../logo.svg';
-import { Suspense } from 'react';
 
 export const Navigation = () => {
-
 
     return (
         <Suspense fallback={ <h1>Loading...</h1> }>
