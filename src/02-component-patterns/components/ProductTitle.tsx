@@ -1,7 +1,8 @@
+import { ProductTitleProps } from "../interfaces/interfaces";
 import { ProductContext } from "../context/productContext";
 import { useContext } from "react";
 
-export const ProductTitle = ( { title }: { title: string } ) => {
+export const ProductTitle = ( { title, className, style }: ProductTitleProps ) => {
 
     const { product, styles } = useContext( ProductContext );
   
@@ -22,7 +23,7 @@ export const ProductTitle = ( { title }: { title: string } ) => {
     }
   
     return (
-      <span className={ styles.productDescription }>{ titleToShow }</span>
+      <span className={ `${ styles.productDescription } ${ className } ` } style={ style } >{ titleToShow }</span>
     );
   
 };

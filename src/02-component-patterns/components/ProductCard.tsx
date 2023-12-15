@@ -4,13 +4,13 @@ import { useProduct } from "../hooks/useProduct";
 import { Props } from "../interfaces/interfaces";
 import styles from "../styles/styles.module.css";
 
-export const ProductCard = ( { product, children }: Props ) => {
+export const ProductCard = ( { product, children, className, style }: Props ) => {
 
   const { counter, increaseBy } = useProduct();
 
   return (
     <ProductContext.Provider value={{ counter, increaseBy, product, styles }} >
-      <div className={ styles.productCard }>
+      <div className={ `${ styles.productCard } ${ className } ` } style={ style } >
 
         { children }
 
